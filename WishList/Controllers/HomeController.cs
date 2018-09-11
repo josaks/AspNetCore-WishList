@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WishList.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-		public string index()
+		public IActionResult Index()
         {
-			return "Hello from controller";
+            return View("Index");
+        }
+
+		public IActionResult Error()
+        {
+            return View("Error");
         }
     }
 }
